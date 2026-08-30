@@ -191,7 +191,6 @@ export function BookingForm({ services }: { services: Service[] }) {
         )}
       </div>
 
-      <Textarea className="hidden" tabIndex={-1} aria-hidden readOnly value="" />
 
       {error ? <p className="text-sm text-destructive">{error}</p> : null}
 
