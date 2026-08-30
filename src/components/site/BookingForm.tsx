@@ -152,10 +152,11 @@ export function BookingForm({ services }: { services: Service[] }) {
         </div>
         <div className="space-y-2">
           <Label htmlFor="notes">Notes (optional)</Label>
-          <Input
+          <Textarea
             id="notes"
             value={notes}
             maxLength={500}
+            rows={1}
             onChange={(e) => setNotes(e.target.value)}
             placeholder="Fade level, style reference…"
           />
