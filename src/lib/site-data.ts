@@ -71,5 +71,5 @@ export function formatTime(value: string | null) {
 
 export function formatPrice(value: number | string) {
   const n = typeof value === "string" ? Number(value) : value;
-  return `${n.toFixed(0)} DT`;
+  return `${n.toFixed(0)} TND`;
 }
