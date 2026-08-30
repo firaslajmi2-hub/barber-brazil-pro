@@ -5,14 +5,15 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * BRAZIIILYY — dark luxury barbershop design system.
- * Black canvas, gold primary, emerald-green Brazilian accent.
+ * BRAZIIILYY — street barber design system.
+ * Black / dark grey canvas, white text, Brazil yellow + green accents.
  * All colors are oklch semantic tokens. Never hardcode colors in components.
  */
 
 @theme inline {
-  --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
-  --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -67,57 +68,58 @@
 }
 
 :root {
-  --radius: 0.5rem;
+  --radius: 0.25rem;
 
-  --background: oklch(0.13 0.005 90);
-  --foreground: oklch(0.96 0.008 90);
+  --background: oklch(0.15 0 0);
+  --foreground: oklch(0.97 0 0);
 
-  --surface: oklch(0.17 0.008 90);
-  --surface-2: oklch(0.21 0.01 90);
+  --surface: oklch(0.2 0 0);
+  --surface-2: oklch(0.25 0 0);
 
-  --card: oklch(0.17 0.008 90);
-  --card-foreground: oklch(0.96 0.008 90);
-  --popover: oklch(0.17 0.008 90);
-  --popover-foreground: oklch(0.96 0.008 90);
+  --card: oklch(0.2 0 0);
+  --card-foreground: oklch(0.97 0 0);
+  --popover: oklch(0.2 0 0);
+  --popover-foreground: oklch(0.97 0 0);
 
-  --gold: oklch(0.79 0.13 85);
-  --gold-soft: oklch(0.88 0.08 90);
-  --jade: oklch(0.7 0.16 152);
+  /* "gold" token kept for compatibility — now Brazil yellow */
+  --gold: oklch(0.85 0.17 95);
+  --gold-soft: oklch(0.91 0.13 100);
+  --jade: oklch(0.62 0.16 150);
 
-  --primary: oklch(0.79 0.13 85);
-  --primary-foreground: oklch(0.14 0.01 85);
-  --secondary: oklch(0.24 0.012 90);
-  --secondary-foreground: oklch(0.95 0.008 90);
-  --muted: oklch(0.22 0.008 90);
-  --muted-foreground: oklch(0.68 0.015 90);
-  --accent: oklch(0.7 0.16 152);
-  --accent-foreground: oklch(0.14 0.02 152);
-  --destructive: oklch(0.6 0.21 25);
-  --destructive-foreground: oklch(0.97 0.01 25);
+  --primary: oklch(0.85 0.17 95);
+  --primary-foreground: oklch(0.16 0 0);
+  --secondary: oklch(0.26 0 0);
+  --secondary-foreground: oklch(0.96 0 0);
+  --muted: oklch(0.24 0 0);
+  --muted-foreground: oklch(0.7 0 0);
+  --accent: oklch(0.62 0.16 150);
+  --accent-foreground: oklch(0.16 0.02 150);
+  --destructive: oklch(0.58 0.19 27);
+  --destructive-foreground: oklch(0.97 0.01 27);
 
-  --border: oklch(0.3 0.015 90);
-  --input: oklch(0.28 0.012 90);
-  --ring: oklch(0.79 0.13 85);
+  --border: oklch(0.3 0 0);
+  --input: oklch(0.3 0 0);
+  --ring: oklch(0.85 0.17 95);
 
-  --gradient-gold: linear-gradient(100deg, var(--gold-soft), var(--gold) 45%, oklch(0.62 0.11 78) 100%);
-  --gradient-night: linear-gradient(180deg, oklch(0.13 0.005 90 / 0) 0%, oklch(0.13 0.005 90 / 0.75) 55%, var(--background) 100%);
-  --shadow-gold: 0 24px 60px -28px oklch(0.79 0.13 85 / 0.45);
-  --shadow-deep: 0 30px 70px -40px oklch(0 0 0 / 0.9);
+  --gradient-gold: linear-gradient(100deg, var(--gold), var(--jade) 140%);
+  --gradient-night: linear-gradient(180deg, oklch(0.15 0 0 / 0) 0%, oklch(0.15 0 0 / 0.7) 60%, var(--background) 100%);
+  --shadow-gold: 0 12px 30px -20px oklch(0 0 0 / 0.8);
+  --shadow-deep: 0 18px 40px -30px oklch(0 0 0 / 0.9);
 
-  --chart-1: oklch(0.79 0.13 85);
-  --chart-2: oklch(0.7 0.16 152);
-  --chart-3: oklch(0.88 0.08 90);
-  --chart-4: oklch(0.55 0.1 85);
-  --chart-5: oklch(0.5 0.12 152);
+  --chart-1: oklch(0.85 0.17 95);
+  --chart-2: oklch(0.62 0.16 150);
+  --chart-3: oklch(0.97 0 0);
+  --chart-4: oklch(0.5 0.1 95);
+  --chart-5: oklch(0.45 0.12 150);
 
-  --sidebar: oklch(0.15 0.006 90);
-  --sidebar-foreground: oklch(0.95 0.008 90);
-  --sidebar-primary: oklch(0.79 0.13 85);
-  --sidebar-primary-foreground: oklch(0.14 0.01 85);
-  --sidebar-accent: oklch(0.22 0.008 90);
-  --sidebar-accent-foreground: oklch(0.95 0.008 90);
-  --sidebar-border: oklch(0.3 0.015 90);
-  --sidebar-ring: oklch(0.79 0.13 85);
+  --sidebar: oklch(0.17 0 0);
+  --sidebar-foreground: oklch(0.96 0 0);
+  --sidebar-primary: oklch(0.85 0.17 95);
+  --sidebar-primary-foreground: oklch(0.16 0 0);
+  --sidebar-accent: oklch(0.24 0 0);
+  --sidebar-accent-foreground: oklch(0.96 0 0);
+  --sidebar-border: oklch(0.3 0 0);
+  --sidebar-ring: oklch(0.85 0.17 95);
 }
 
 @keyframes fade-up {
@@ -176,15 +178,11 @@
 }
 
 @utility text-gold-gradient {
-  background-image: var(--gradient-gold);
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--gold);
 }
 
 @utility bg-gold-gradient {
-  background-image: var(--gradient-gold);
+  background-color: var(--gold);
 }
 
 @utility shadow-gold {
