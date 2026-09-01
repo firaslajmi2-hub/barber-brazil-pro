@@ -8,6 +8,8 @@ import { ReservationsPanel, useReservations } from "@/components/admin/Reservati
 import { SchedulePanel } from "@/components/admin/SchedulePanel";
 import { ServicesPanel, useAdminServices } from "@/components/admin/ServicesPanel";
 import { ContentPanel } from "@/components/admin/ContentPanel";
+import { PhotosPanel } from "@/components/admin/PhotosPanel";
+
 import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/_authenticated/admin")({
@@ -102,7 +104,9 @@ function AdminDashboard() {
             <TabsTrigger value="reservations">Reservations</TabsTrigger>
             <TabsTrigger value="schedule">Working hours</TabsTrigger>
             <TabsTrigger value="services">Services</TabsTrigger>
+            <TabsTrigger value="photos">Photos</TabsTrigger>
             <TabsTrigger value="content">Website content</TabsTrigger>
+
           </TabsList>
           <TabsContent value="reservations">
             <ReservationsPanel services={services.map((s) => ({ id: s.id, name: s.name }))} />
@@ -113,9 +117,13 @@ function AdminDashboard() {
           <TabsContent value="services">
             <ServicesPanel />
           </TabsContent>
+          <TabsContent value="photos">
+            <PhotosPanel />
+          </TabsContent>
           <TabsContent value="content">
             <ContentPanel />
           </TabsContent>
+
         </Tabs>
       </main>
     </div>
