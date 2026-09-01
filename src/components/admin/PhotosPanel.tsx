@@ -76,7 +76,9 @@ function SinglePhoto({
   const current = (data?.[column] as string | null) ?? null;
 
   const save = async (value: string | null) => {
-    const { error } = await supabase.from("site_settings").update({ [column]: value }).eq("id", 1);
+    const patch = column === "hero_image_url" ? { hero_image_url: value } : { logo_url: value };
+    const { error } = await supabase.from("site_settings").update(patch).eq("id", 1);
+
     if (error) throw error;
     queryClient.invalidateQueries({ queryKey: ["site_settings"] });
   };
